@@ -8,8 +8,8 @@ bot.on('ready', () => {
 })
 
 bot.on('message', msg=>{
-    if(msg.content.toLowerCase() === 'hello'){
-        msg.reply('Hello');
+    if(msg.content.toLowerCase() === 'wtf maat'){
+        msg.reply('U dikke boma maat');
     }
 })
 
