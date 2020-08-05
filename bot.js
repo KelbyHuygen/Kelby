@@ -11,6 +11,9 @@ bot.on('message', msg=>{
     if(msg.content.toLowerCase() === 'hello'){
         msg.reply('Ni geniete');
     }
-})
+    if(msg.content.toLowerCase === 'czn'){
+        msg.channel.send('Ewa');
+    }
+});
 
 bot.login(token);
