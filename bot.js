@@ -12,5 +12,10 @@ bot.on('message', msg=>{
         msg.reply('U dikke boma maat');
     }
 })
+bot.on('message', msg=>{
+    if(msg.content.toLowerCase() === 'ewa'){
+        msg.channel.send('drerie');
+    }
+})
 
 bot.login(token);
