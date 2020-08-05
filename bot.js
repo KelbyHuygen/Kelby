@@ -10,7 +10,7 @@ bot.on('message', msg=>{
 
     switch(args[0]){
         case 'ping':
-            message.reply('pong');
+            msg.reply('pong');
             break;
     }
 })
