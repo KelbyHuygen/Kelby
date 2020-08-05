@@ -8,7 +8,7 @@ bot.on('ready', () => {
 })
 
 bot.on('message', msg=>{
-    if(msg.content.toLowerCase === "HELLO"){
+    if(msg.content.toLowerCase === 'hello'){
         msg.reply('Hello');
     }
 })
