@@ -17,5 +17,17 @@ bot.on('message', msg=>{
         msg.channel.send('drerie');
     }
 })
+bot.on('guildMemberAdd', member =>{
 
+    const channel = member.guild.channels.find(channel => channel.name === "welcome-goodbye"); 
+    if(!channel) return;
+
+    channel.send(`Welcome to our server, ${member}`)
+});
+bot.on('guildMemberRemove', member =>{
+
+    const channel = member.guild.channels.find(channel => channel.name === "welcome-goodbye" );
+    if(!channel) return;
+    channel.send(`${member} just left our server :(`)
+});
 bot.login(token);
