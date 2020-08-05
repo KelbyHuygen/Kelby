@@ -26,8 +26,8 @@ bot.on('guildMemberAdd', member =>{
 });
 bot.on('guildMemberRemove', member =>{
 
-    const channel = member.guild.channels.find(channel => channel.name === "welcome-goodbye" );
+    const channel = member.guild.channels.find(channel => channel.name === "welcome-goodbye");
     if(!channel) return;
-    channel.send(`${member} just left our server :(`)
+    channel.send(`${member} just left our server`)
 });
 bot.login(token);
