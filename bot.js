@@ -9,7 +9,7 @@ bot.on('ready', () => {
 
 bot.on('message', msg=>{
     if(msg.content.toLowerCase === 'hello'){
-        msg.reply('Hello');
+        msg.reply('Ni geniete');
     }
 })
 
