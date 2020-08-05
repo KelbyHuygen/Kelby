@@ -3,6 +3,17 @@ const bot = new Discord.Client();
 
 const token = 'NzQwNTEyNjY5ODM2MjQ3MTAx.XyqGKg.xDkxM-Z201i_yUYgVhL2Te3RmP0';
 
+const prefix = '?';
+bot.on('message', msg=>{
+
+    let arg = msg.content.substring(prefix.lenght).split(" ");
+
+    switch(args[0]){
+        case 'ping':
+            message.reply('pong');
+            break;
+    }
+})
 bot.on('ready', () => {
     console.log('This bot is online!');
 })
