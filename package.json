@@ -4,14 +4,14 @@
   "description": "",
   "main": "bot.js",
   "scripts": {
-    "start": "node bot.js"
+    "start": "bot node.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/KelbyHuygen/Kelby.git"
   },
   "keywords": [],
-  "author": "Kelby",
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/KelbyHuygen/Kelby/issues"
