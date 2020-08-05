@@ -11,6 +11,6 @@ bot.on('message', msg=>{
     if(msg.author.bot)
     return;
 
-    if(msg.content.toLowerCase() === 'hello')
+    if(msg.content.toLowerCase() === 'fakka')
         msg.reply('Nigeniete');
 });
