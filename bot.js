@@ -12,9 +12,5 @@ bot.on('message', msg=>{
     return;
 
     if(msg.content.toLowerCase() === 'hello')
-        msg.reply('Ni geniete');
-
-
+        msg.reply('Nigeniete');
 });
-
-bot.login(token);
