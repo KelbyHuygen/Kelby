@@ -3,10 +3,10 @@ const bot = new Discord.Client();
 
 const token = 'NzQwNTEyNjY5ODM2MjQ3MTAx.XyqGKg.xDkxM-Z201i_yUYgVhL2Te3RmP0';
 
-const prefix = '?';
+const PREFIX = '?';
 bot.on('message', msg=>{
 
-    let arg = msg.content.substring(prefix.length).split(" ");
+    let arg = msg.content.substring(PREFIX.length).split(" ");
 
     switch(args[0]){
         case 'ping':
