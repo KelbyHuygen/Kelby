@@ -8,6 +8,9 @@ bot.on('ready', () => {
 })
 
 bot.on('message', msg=>{
+    if(msg.author.bot)
+    return;
+
     if(msg.content.toLowerCase() === 'hello'){
         msg.reply('Ni geniete');
     }
