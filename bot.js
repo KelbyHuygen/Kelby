@@ -27,8 +27,8 @@ bot.on('message', msg=>{
         break;
 
         case 'about':
-            const embed = new Discord.MessageEmbed().addField('Player name', message.author.username);
-            message.channel.send(embed);
+            const embed = new Discord.MessageEmbed().addField('Player name', msg.author.username);
+            msg.channel.send(embed);
         break;    
     }
 })
