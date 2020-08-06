@@ -21,6 +21,10 @@ bot.on('message', msg=>{
             msg.channel.send(description);
             break;
             
+        case 'clear':
+            if(!args[1]) return msg.reply('Error, please type a number')
+            msg.channel.bulkDelete(args[1]);    
+        break;
     }
 })
 bot.on('ready', () => {
