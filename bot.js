@@ -28,7 +28,7 @@ bot.on('message', msg=>{
 
         case 'about':
             const embed = new Discord.MessageEmbed()
-            .settitle('About')
+            .setTitle('About')
             .addField('Version', version)
             .addField('Player name', msg.author.username);
             msg.channel.send(embed);
