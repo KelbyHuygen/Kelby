@@ -31,8 +31,9 @@ bot.on('message', msg=>{
             .setTitle('About')
             .addField('Version', version)
             .addField('Player name', msg.author.username)
-            .addFooter('Author', '© - [̲̲̅̅K̲̲̅̅e̲̲̅̅l̲̲̅̅b̲̲̅̅y̲̲̅̅]#5236')
+            .addField('Author', '© - [̲̲̅̅K̲̲̅̅e̲̲̅̅l̲̲̅̅b̲̲̅̅y̲̲̅̅]#5236')
             .setThumbnail(msg.author.displayAvatarURL())
+            .setFooter('Made with love <3')
             .setColor('#0014a8');
             msg.channel.send(embed);
         break;    
