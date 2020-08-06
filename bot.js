@@ -13,7 +13,7 @@ bot.on('message', msg=>{
             msg.reply('pong');
             break;
 
-        case 'info':
+        case 'version':
             msg.channel.send('Version ' + version );
             break;
         
@@ -25,6 +25,11 @@ bot.on('message', msg=>{
             if(!args[1]) return msg.reply('Error, please type a number')
             msg.channel.bulkDelete(args[1]);    
         break;
+
+        case 'about':
+            const embed = new Discord.Richembed().addField('Player name', message.author.username);
+            message.channel.sendembed(embed);
+        break;    
     }
 })
 bot.on('ready', () => {
