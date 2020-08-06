@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const bot = new Discord.Client();
 
 const token = 'NzQwNTEyNjY5ODM2MjQ3MTAx.XyqGKg.xDkxM-Z201i_yUYgVhL2Te3RmP0';
-const version = '1.2.0';
+const version = '1.4.0';
 const prefix = '?';
 bot.on('message', msg=>{
 
@@ -27,7 +27,10 @@ bot.on('message', msg=>{
         break;
 
         case 'about':
-            const embed = new Discord.MessageEmbed().addField('Player name', msg.author.username);
+            const embed = new Discord.MessageEmbed()
+            .settitle('About')
+            .addField('Version', version)
+            .addField('Player name', msg.author.username);
             msg.channel.send(embed);
         break;    
     }
