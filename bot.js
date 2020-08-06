@@ -11,12 +11,10 @@ bot.on('message', msg=>{
     switch(args[0]){
         case 'ping':
             msg.reply('pong');
-            const description = "pong";
             break;
 
         case 'info':
             msg.channel.send('Version ' + version );
-            const description = "Shows the current version";
             break;
         
         case 'help':
