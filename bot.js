@@ -30,7 +30,9 @@ bot.on('message', msg=>{
             const embed = new Discord.MessageEmbed()
             .setTitle('About')
             .addField('Version', version)
-            .addField('Player name', msg.author.username);
+            .addField('Player name', msg.author.username)
+            .addField('Author', '©[̲̲̅K̲̲̅e̲̲̅l̲̲̅b̲̲̅y̲̲̅')
+            .setColor('#0014a8');
             msg.channel.send(embed);
         break;    
     }
