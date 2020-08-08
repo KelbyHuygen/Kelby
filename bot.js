@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const bot = new Discord.Client();
 
 const token = 'NzQwNTEyNjY5ODM2MjQ3MTAx.XyqGKg.xDkxM-Z201i_yUYgVhL2Te3RmP0';
-const version = '1.4.0';
+const version = '1.4.1';
 const PREFIX = '?';
 bot.on('message', msg=>{
 
