@@ -3,10 +3,10 @@ const bot = new Discord.Client();
 
 const token = 'NzQwNTEyNjY5ODM2MjQ3MTAx.XyqGKg.xDkxM-Z201i_yUYgVhL2Te3RmP0';
 const version = '1.4.1';
-const PREFIX = '?';
+const prefix = '?';
 bot.on('message', msg=>{
 
-    let args = msg.content.substring(PREFIX.length).split(" ");
+    let args = msg.content.substring(prefix.length).split(" ");
 
     switch(args[0]){
         case 'ping':
@@ -36,7 +36,13 @@ bot.on('message', msg=>{
             .setFooter('Made with love <3')
             .setColor('#0014a8');
             msg.channel.send(embed);
-        break;    
+        break;
+
+        case 'test':
+            if(!msg.member.roles.find(r => r.name === "Beheerder") || !msg.member.roles.find(r => r.name === "Moderator")) return msg.channel.send('You dont have the permissions to do that.')
+            .then(msg=> msg.delete(5000))
+            msg.reply('test')
+            break;
     }
 })
 bot.on('ready', () => {
@@ -58,12 +64,12 @@ bot.on('guildMemberAdd', member =>{
     const channel = member.guild.channels.cache.find(channel => channel.name === "welcome-goodbye"); 
     if(!channel) return;
 
-    channel.send(`Welcome to our server, ${member}`)
+    channel.send(`Welcome to our server, ${member} :grinning:`)
 });
 bot.on('guildMemberRemove', member =>{
 
     const channel = member.guild.channels.cache.find(channel => channel.name === "welcome-goodbye");
     if(!channel) return;
-    channel.send(`${member} just left our server`)
+    channel.send(`${member} just left our server. :slight_frown:`)
 });
 bot.login(token);
