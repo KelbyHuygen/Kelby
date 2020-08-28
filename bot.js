@@ -39,7 +39,7 @@ bot.on('message', msg=>{
         break;
 
         case 'test':
-            if(!msg.member.roles.find(r => r.name === "Beheerder") || !msg.member.roles.find(r => r.name === "Moderator")) return msg.channel.send('You dont have the permissions to do that.')
+            if (!msg.member.roles.cache.has(r => r.name === "Beheerder") || !msg.member.roles.find(r => r.name === "Moderator")) return msg.channel.send('You dont have the permissions to do that.')
             .then(msg => msg.delete({timeout: 2000}));
             msg.reply('test')
             break;
